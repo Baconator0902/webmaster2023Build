@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/signUpLogin.js"></script>
     <title>login/signup</title>
 </head>
 <body>
@@ -78,10 +79,10 @@
         </div>
 
         <div id="logInButtons">
-            <button type="button" onclick="logInButton()">
+            <button type="button" onclick="signUpShow()">
                 Sign Up
             </button>
-            <button type="button" onclick="SignUpButton()">
+            <button type="button" onclick="logInShow()">
                 Log In
             </button>
         </div>
@@ -113,8 +114,8 @@
                 <label for="password2">confirm password:</label>
                 <input type="password" id="password2" name="password2" required>
                 <br>
-                <label for="termsAndConditions">I have read and agree to the terms and conditions</label>
                 <input type="checkbox" id="termsAndConditions" name="termsAndConditions" required> 
+                <label for="termsAndConditions">I have read and agree to the terms and conditions</label>
                 <br>
                 <input type="submit">
                 
@@ -132,7 +133,7 @@
                 <input type="password" id="password1" name="password1" required>
                 <br>
 
-                <a href="signUpLogin.html">Forgot password?</a>
+                <a href="forgotPassword.html">Forgot password?</a>
                 
                 <input type="submit">
 

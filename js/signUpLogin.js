@@ -1,4 +1,4 @@
-function logInButton() {
+function signUpShow() {
 
     signUpDiv = document.getElementById("signUpDiv");
     logInDiv = document.getElementById("logInDiv");
@@ -7,7 +7,7 @@ function logInButton() {
     logInDiv.style.display = "none";
 }
 
-function SignUpButton() {
+function logInShow() {
 
     signUpDiv = document.getElementById("signUpDiv");
     logInDiv = document.getElementById("logInDiv");
