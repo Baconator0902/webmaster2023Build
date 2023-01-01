@@ -1,0 +1,17 @@
+function logInButton() {
+
+    signUpDiv = document.getElementById("signUpDiv");
+    logInDiv = document.getElementById("logInDiv");
+
+    signUpDiv.style.display = "block";
+    logInDiv.style.display = "none";
+}
+
+function SignUpButton() {
+
+    signUpDiv = document.getElementById("signUpDiv");
+    logInDiv = document.getElementById("logInDiv");
+
+    signUpDiv.style.display = "none";
+    logInDiv.style.display = "block";
+}

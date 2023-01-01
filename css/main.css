@@ -119,12 +119,12 @@ section {
 }
 
 section:nth-child(odd) {
-  background-color: green;
+  background-color: rgb(166, 57, 28);
 
 
 } 
 
 section:nth-child(even) {
-  background-color: darkgreen;
+  background-color: rgb(170, 86, 23);
   
 } 

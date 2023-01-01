@@ -77,6 +77,69 @@
            </nav>
         </div>
 
+        <div id="logInButtons">
+            <button type="button" onclick="logInButton()">
+                Sign Up
+            </button>
+            <button type="button" onclick="SignUpButton()">
+                Log In
+            </button>
+        </div>
+        <div class="hiddenDropdown" id="signUpDiv">
+            
+            <form>
+                <h2>Sign Up</h2>
+                <label for="first_name">First name:</label>
+                <input type="text" id="first_name" name="first_name" placeholder="John" required>
+                <br>
+                <label for="last_name">Last name:</label>
+                <input type="text" id="last_name" name="last_name" placeholder="Doe" required>
+                <br>
+                <label for="age">Birth date:</label>
+                <input type="date" id="age" name="age" required>
+                <br>
+                <label for="Email">Email</label>
+                <input type="text" id="Email" name="Email" placeholder="tothe.stars@gmail.com" required>
+                <br>
+                <label for="phoneNumber">Phone Number (optional)</label>
+                <input type="text" id="phoneNumber" name="phoneNumber" placeholder="191-123-456-7890">
+                <br>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="JohnToTheStars09" required>
+                <br>
+                <label for="password1">password:</label>
+                <input type="password" id="password1" name="password1" required>
+                <br>
+                <label for="password2">confirm password:</label>
+                <input type="password" id="password2" name="password2" required>
+                <br>
+                <label for="termsAndConditions">I have read and agree to the terms and conditions</label>
+                <input type="checkbox" id="termsAndConditions" name="termsAndConditions" required> 
+                <br>
+                <input type="submit">
+                
+            </form>
+        </div>
+
+        <div class="hiddenDropdown" id="logInDiv" style="display: none;">
+            
+            <form>
+                <h2>Log In</h2>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="JohnToTheStars09" required>
+                <br>
+                <label for="password1">password:</label>
+                <input type="password" id="password1" name="password1" required>
+                <br>
+
+                <a href="signUpLogin.html">Forgot password?</a>
+                
+                <input type="submit">
+
+            </form>
+        </div>
+
+
         <footer>
             <ul>
                 <li>Copyright 2023</li>

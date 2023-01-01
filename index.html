@@ -6,13 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <title>landing</title>
+    
+    <style> 
+        #topHead {
+            display: grid;
+            grid-template-columns:  1fr, 1fr;
+            grid-template-rows: 1fr;
+        }
+
+        #leftTable {
+            grid-column: 1;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 20%, 20%, 20%, 40%;
+        }
+
+        #rightTable {
+            grid-column: 2;
+            display: grid;
+            grid-template-columns: 1fr, 1fr, 1fr;
+            grid-template-rows: 1fr, 1fr, 1fr, 1fr;
+        }
+
+        #suitcaseAstronaut {
+            grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start: 1;
+            grid-row-end: 4;
+        }
+
+        #takeoff {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        #tableHead {
+            grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start: 1;
+            grid-row-end: 1;
+        }
+
+        #missionText {
+            grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start: 2;
+            grid-row-end: 2;
+        }
+
+        #bookButton {
+            grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start: 3;
+            grid-row-end: 3;
+        }
+    </style>
 </head>
 <body>
     <div id="navBackground">
         
         <nav id="navBar">
             <ul>
-                <li><h1>Magnanimous Enterprises</h1></li>
+                <li><h1>TO THE STARS</h1></li>
                 <li onmouseover="showNav(1)" onmouseleave="hideNav(1)">
                     <a href="index.html">Landing</a>
                     <ul class="hiddenNav" id="hiddenNav-1">
@@ -76,6 +133,19 @@
             </ul>
            </nav>
         </div>
+
+<section id="topHead">
+    <div id="leftTable">
+        <h1 id="tableHead">TO THE STARS</h1>
+        <p id="missionText"><b>OUR MISSION:</b><br> As the first true space tourism company on the planet, TO THE STARS is committed to providing all customers with the best possible space adventure. We believe that everyone deserves the opportunity to make it to space, Earth's final frontier.</p>
+        <button id="bookButton">BOOK NOW</button>
+    </div>
+    <div id="rightTable">
+        <img src="/images/AstronautwithSuitcase.svg" id="suitcaseAstronaut">
+        <img src="/images/RocketwithLiftoff.svg" id="takeoff">
+    </div>
+    
+</section>
 
     <section>
         <h2>About us</h2>
