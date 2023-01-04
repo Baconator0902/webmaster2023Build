@@ -28,6 +28,10 @@ nav a {
   display: none;
 }
 
+footer > ul > li > a {
+  color: black !important;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -40,7 +44,7 @@ ul {
   }
   
   li a {
-    color: yellow;
+    color: #EFE8CC;
     margin: 0;
     display: block;
     text-align: center;
@@ -50,7 +54,7 @@ ul {
   
   li a:hover {
     color: blue;
-    background-color: #259225;
+    background-color: #EFE8CC;
   }
 
 .hiddenNav {
