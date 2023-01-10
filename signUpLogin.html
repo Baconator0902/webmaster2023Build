@@ -37,12 +37,12 @@
 
         label {
             position: absolute;
-            left: 60vw;
         }
 
         input {
             position: relative;
-            left: 5vw;
+            margin-left: 15vw;
+            width: 25vw;
         }
 
         input[type="submit"] {
@@ -115,9 +115,9 @@
                 <label for="password2">confirm password:</label>
                 <input type="password" id="password2" name="password2" required>
                 <br>
-                <input type="checkbox" id="termsAndConditions" name="termsAndConditions" required> 
-                <label for="termsAndConditions">I have read and agree to the terms and conditions</label>
+                <p style="color: rgb(170, 86, 23);">I have read and agree to the <a href="/pdfs/TermsandConditions.pdf">terms and conditions</a></p>
                 <br>
+                <input type="checkbox" id="termsAndConditions" name="termsAndConditions" required> 
                 <input type="submit">
                 
             </form>
