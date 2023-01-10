@@ -8,9 +8,17 @@
     <title>landing</title>
     
     <style> 
+        li > h4::before {
+            background: lightgray;
+            border-radius: 1ch;
+            padding-inline: 1ch;
+            margin-inline-end: 1ch;
+          }
+
         #topHead {
+            background-image: url("/images/LandingPageBackground.svg");
             display: grid;
-            grid-template-columns:  1fr, 1fr;
+            grid-template-columns:  50vw, 50vw;
             grid-template-rows: 1fr;
         }
 
@@ -18,17 +26,20 @@
             grid-column: 1;
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 20%, 20%, 20%, 40%;
+            grid-template-rows: 20% 30% 50%;
         }
 
         #rightTable {
             grid-column: 2;
             display: grid;
+            width: 50vw;
             grid-template-columns: 1fr, 1fr, 1fr;
             grid-template-rows: 1fr, 1fr, 1fr, 1fr;
         }
 
         #suitcaseAstronaut {
+            width: 100%;
+            height: auto;
             grid-column-start: 1;
             grid-column-end: 1;
             grid-row-start: 1;
@@ -62,6 +73,15 @@
             grid-row-start: 3;
             grid-row-end: 3;
         }
+
+        #highlightsUl > li::before {
+            content: '';
+            display: block;
+            height: 35px;
+            width: 45px;
+            background-size: contain;
+            background-image: url("images/rocket.png");
+        }
     </style>
 </head>
 <body>
@@ -69,7 +89,7 @@
         
         <nav id="navBar">
             <ul>
-                <li><h1>TO THE STARS</h1></li>
+                <img src="/images/TotheStarsHomeLogo.svg" style="height: 75%; padding: 0; top: 0;">
                 <li>
                     <a href="index.html">Landing</a>
                 </li>
@@ -99,11 +119,11 @@
         <button id="bookButton">BOOK NOW</button>
     </div>
     <div id="rightTable">
-        <img src="/images/AstronautwithSuitcase.svg" id="suitcaseAstronaut">
-        <img src="/images/RocketwithLiftoff.svg" id="takeoff">
-    </div>
+        <img src="/images/AstronautandRocket.svg" id="suitcaseAstronaut">
+  
     
 </section>
+</div>
 
     <section>
         <h2>Our Mission</h2>
@@ -114,17 +134,17 @@
         <h2>Popular Destinations</h2>
         <ul>
             <li>
-                <h4>USA</h4>
+                <h4 style="list-style-image: url(images/flags/usa.png); padding-inline-start: 1ch;">USA</h4>
                 <p>This is our biggest hub, and the launch site of most of our space tours. This is also the largest astronaut training facility under our control, and, with its location in Texas, a brilliant launch location. Another thing to note is that most of our crew here speaks both Spanish and English for better accessibility.
                 </p>
             </li>
             <li>
-                <h4>Canada</h4>
+                <h4 style="list-style-image: url(images/flags/canada.png); padding-inline-start: 1ch;">Canada</h4>
                 <p>Through recent partnerships with the Canadian Space Agency, we are proud to present our newest location, The Canadian Launch outside of Quebec. This facility boasts similar levels of the one in Texas, though is not quite as large. Please note that most of our crew here speaks both French and English.
                 </p>
             </li>
             <li>
-                <h4>England</h4>
+                <h4 style="list-style-image: url(images/flags/uk.png); padding-inline-start: 1ch;">England</h4>
                 <p>This location outside of London serves as our European Hub, and acts as an accessibility hub for some people who do not speak French or Spanish. We have at least one employee here capable of speaking French, English, Spanish, Portuguese, German, Russian, and Italian.
                 </p>
             </li>
@@ -149,7 +169,7 @@
     </section>
     <section>
         <h2>Highlights</h2>
-            <ul>
+            <ul id="highlightsUl">
                 <li>
                     <h4>Spacewalk</h4>
                     <p>This activity is perhaps the most famous astronaut activity of them all, and is featured on the majority of our trips. It involves wearing a spacesuit and venturing out of the ship while remaining attached via a return cord. 
@@ -176,7 +196,7 @@
 
     <footer>
         <ul>
-            <li>Copyright 2023</li>
+            <li id="footerCopyright">Copyright 2023</li>
             <li><a href="FAQ.html">FAQ</a></li>
             <li><a href="references.html">References</a></li>
         </ul>

@@ -7,77 +7,73 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="js/signUpLogin.js"></script>
     <title>login/signup</title>
+
+    <style>
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        #logInButtons {
+            display: flex;
+        }
+
+        #leftTableImage {
+            grid-column: 1;
+        }
+
+        #rightTable {
+            grid-column: 2;
+            background-image: url("/images/LandingPageBackground.svg");
+        }
+
+        label {
+            position: absolute;
+            left: 60vw;
+        }
+
+        input {
+            position: relative;
+            left: 5vw;
+        }
+
+        input[type="submit"] {
+            margin-top: 70px;
+        }
+    </style>
 </head>
 <body>
     <div id="navBackground">
         
         <nav id="navBar">
             <ul>
-                <li><h1>Magnanimous Enterprises</h1></li>
-                <li onmouseover="showNav(1)" onmouseleave="hideNav(1)">
+                <img src="/images/TotheStarsHomeLogo.svg" style="height: 75%; padding: 0; top: 0;">
+                <li>
                     <a href="index.html">Landing</a>
-                    <ul class="hiddenNav" id="hiddenNav-1">
-                        <li>Test1</li>
-                        <li>Test2</li>
-                        <li>Test3</li>
-                        <li>Test4</li>
-                        <li>Test5</li>
-                    </ul>
                 </li>
-                <li onmouseover="showNav(2)" onmouseleave="hideNav(2)">
+                <li>
                     <a href="info.html">Info</a>
-                    <ul class="hiddenNav" id="hiddenNav-2">
-                        <li>Test1</li>
-                        <li>Test2</li>
-                        <li>Test3</li>
-                        <li>Test4</li>
-                        <li>Test5</li>
-                    </ul>
                 </li>
-                <li onmouseover="showNav(3)" onmouseleave="hideNav(3)">
-                    <a href="book.html">book.html</a>
-                    <ul class="hiddenNav" id="hiddenNav-3">
-                        <li>Test1</li>
-                        <li>Test2</li>
-                        <li>Test3</li>
-                        <li>Test4</li>
-                        <li>Test5</li>
-                    </ul>
+                <li>
+                    <a href="book.html">Book</a>
                 </li>
-                <li onmouseover="showNav(4)" onmouseleave="hideNav(4)">
-                    <a href="safety.html">safety</a>
-                    <ul class="hiddenNav" id="hiddenNav-4">
-                        <li>Test1</li>
-                        <li>Test2</li>
-                        <li>Test3</li>
-                        <li>Test4</li>
-                        <li>Test5</li>
-                    </ul>
+                <li>
+                    <a href="safety.html">Safety</a>
                 </li>
-                <li onmouseover="showNav(4)" onmouseleave="hideNav(4)">
-                    <a href="planTrip.html">Plan Trip</a>
-                    <ul class="hiddenNav" id="hiddenNav-4">
-                        <li>Test1</li>
-                        <li>Test2</li>
-                        <li>Test3</li>
-                        <li>Test4</li>
-                        <li>Test5</li>
-                    </ul>
+                <li>
+                    <a href="planTrip.html">Plan a trip</a>
                 </li>
-                <li onmouseover="showNav(4)" onmouseleave="hideNav(4)">
-                    <a href="signUpLogin.html">sign up</a>
-                    <ul class="hiddenNav" id="hiddenNav-4">
-                        <li>Test1</li>
-                        <li>Test2</li>
-                        <li>Test3</li>
-                        <li>Test4</li>
-                        <li>Test5</li>
-                    </ul>
+                <li>
+                    <a href="signUpLogin.html">Sign up/Log in</a>
                 </li>
             </ul>
            </nav>
         </div>
 
+<main>
+    <img src="images/AstronautwithSuitcase.svg" id="leftTableImage">
+
+    <div id="rightTable">
         <div id="logInButtons">
             <button type="button" onclick="signUpShow()">
                 Sign Up
@@ -139,6 +135,10 @@
 
             </form>
         </div>
+    </div>
+</main>
+
+        
 
 
         <footer>
