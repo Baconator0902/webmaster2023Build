@@ -8,6 +8,8 @@ function showBookFlight() {
     physicalDiv.style.display = "none";
 }
 
+//this is a test
+
 function showTraining() {
     bookingDiv = document.getElementById("bookTripDIV");
     trainingDiv = document.getElementById("bookFlightTraining");
