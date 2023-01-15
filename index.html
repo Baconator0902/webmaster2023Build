@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600&display=swap" rel="stylesheet"> 
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <title>landing</title>
     
     <style> 
@@ -101,6 +102,41 @@
             background-size: contain;
             background-image: url("images/rocket.png");
         }
+
+        #places {
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+
+        #leftPlaces {
+            grid-column: 1;
+        }
+
+        #rightPlaces {
+            grid-column: 2;
+        }
+
+
+        #rightPlaces * {
+            font-size: 0.8em;
+            padding: 0;
+            margin: 0;
+            margin-top: 10px;
+        }
+
+        
+        #rightPlaces > * {
+            font-size: 2em;
+        }
+
+        model-viewer {
+            width: 800px;
+            height: 600px;
+          }
+
+          section a {
+            color: blue;
+          }
     </style>
 </head>
 <body>
@@ -146,34 +182,43 @@
 
     <section>
         <h2>Our Mission</h2>
-        <p>As the first true space tourism and public astronaut training company on the planet, _placeholderName, is committed to providing all customers with the best possible space adventure for them. We believe that everyone deserves the opportunity to make it to space, Earth’s final frontier. We offer training plans and opportunities for any travelers who need a certification to meet our travel requirements, as well as vacation style trips for any group which meets the requirements. We also allow people to book solely training plans, if they only want to complete astronaut training, rather than taking a full trip to outer space at the moment. 
+        <p>As the first true space tourism and public astronaut training company on the planet, To The Stars, is committed to providing all customers with the best possible space adventure for them. We believe that everyone deserves the opportunity to make it to space, Earth’s final frontier. We offer training plans and opportunities for any travelers who need a certification to meet our travel requirements, as well as vacation style trips for any group which meets the requirements. We also allow people to book solely training plans, if they only want to complete astronaut training, rather than taking a full trip to outer space at the moment. 
         </p>
     </section>
-    <section>
-        <h2>Popular Destinations</h2>
-        <ul>
-            <li>
-                <h4 style="list-style-image: url(images/flags/usa.png); padding-inline-start: 1ch;">USA</h4>
-                <p>This is our biggest hub, and the launch site of most of our space tours. This is also the largest astronaut training facility under our control, and, with its location in Texas, a brilliant launch location. Another thing to note is that most of our crew here speaks both Spanish and English for better accessibility.
-                </p>
-            </li>
-            <li>
-                <h4 style="list-style-image: url(images/flags/canada.png); padding-inline-start: 1ch;">Canada</h4>
-                <p>Through recent partnerships with the Canadian Space Agency, we are proud to present our newest location, The Canadian Launch outside of Quebec. This facility boasts similar levels of the one in Texas, though is not quite as large. Please note that most of our crew here speaks both French and English.
-                </p>
-            </li>
-            <li>
-                <h4 style="list-style-image: url(images/flags/uk.png); padding-inline-start: 1ch;">England</h4>
-                <p>This location outside of London serves as our European Hub, and acts as an accessibility hub for some people who do not speak French or Spanish. We have at least one employee here capable of speaking French, English, Spanish, Portuguese, German, Russian, and Italian.
-                </p>
-            </li>
-        </ul>
+
+    <section id="places">
+        <div id="leftPlaces">
+            <model-viewer id="reveal" loading="eager" camera-controls touch-action="pan-y" auto-rotate poster="/models/globeLocationsG.glb" src="/models/globeLocationsG.glb" shadow-intensity="1" alt="A 3D model of a shishkebab"></model-viewer>
+        
+        </div>
+        <div id="rightPlaces">
+            <h2>Popular Destinations</h2>
+            <ul>
+                <li>
+                    <h4 style="list-style-image: url(images/flags/usa.png); padding-inline-start: 1ch;">USA</h4>
+                    <p>This is our biggest hub, and the launch site of most of our space tours. This is also the largest astronaut training facility under our control, and, with its location in Texas, a brilliant launch location. Another thing to note is that most of our crew here speaks both Spanish and English for better accessibility.
+                    </p>
+                </li>
+                <li>
+                    <h4 style="list-style-image: url(images/flags/canada.png); padding-inline-start: 1ch;">Canada</h4>
+                    <p>Through recent partnerships with the Canadian Space Agency, we are proud to present our newest location, The Canadian Launch outside of Quebec. This facility boasts similar levels of the one in Texas, though is not quite as large. Please note that most of our crew here speaks both French and English.
+                    </p>
+                </li>
+                <li>
+                    <h4 style="list-style-image: url(images/flags/uk.png); padding-inline-start: 1ch;">England</h4>
+                    <p>This location outside of London serves as our European Hub, and acts as an accessibility hub for some people who do not speak French or Spanish. We have at least one employee here capable of speaking French, English, Spanish, Portuguese, German, Russian, and Italian.
+                    </p>
+                </li>
+                <li>
+                    <h4 style="list-style-image: url(images/flags/uk.png); padding-inline-start: 1ch;">Future Locations</h4>
+                    <p> Our goal in the next ten years is to open up a launch hub in both South America (with the planned location in Argentina) and Australia (in Sydney). We are also working towards an agreement with the Russian government that would allow us to open a launch location just outside of Moscow.
+                    </p>
+                </li>
+            </ul>
+        </div>
+                
     </section>
-    <section>
-        <h2>Learn More</h2>
-        <p>Click Here to learn more about our safety policies!</p>
-        <p>Click Here to learn more about our travel requirements!</p>
-    </section>
+
     <section>
         <h2>Past Trips</h2>
             <ul>
@@ -212,6 +257,11 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dolorum nesciunt eligendi neque nemo blanditiis voluptatum id in dignissimos dolor porro, harum repellat magnam dicta.</p>
     </section>
 
+    <section>
+        <h2>Learn More</h2>
+        <p>Click<a href="safety.html">Here</a>to learn more about our safety policies!</p>
+        <p>Click<a href="info.html">Here</a>to learn more about our travel requirements!</p>
+    </section>
 
     <footer>
         <ul>
