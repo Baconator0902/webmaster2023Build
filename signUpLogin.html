@@ -18,13 +18,26 @@
             color: black;
         }
 
+        form {
+            padding: 0;
+        }
+
         main {
             display: grid;
             grid-template-columns: 1fr 1fr;
         }
 
         #logInButtons {
-            display: flex;
+            position: relative;
+            width: 100%;
+        }
+
+        #logInButtons > * {
+            width: 100%;
+        }
+
+        #signUpDiv {
+            padding: 0;
         }
 
         #leftTableImage {
@@ -33,6 +46,7 @@
 
         #rightTable {
             grid-column: 2;
+            padding: 0;
         }
 
         label {
@@ -43,10 +57,6 @@
             position: relative;
             margin-left: 15vw;
             width: 25vw;
-        }
-
-        input[type="submit"] {
-            margin-top: 70px;
         }
 
         h2, label {
@@ -82,7 +92,7 @@
            </nav>
         </div>
 
-<main>
+<main style="background-color: #FFF1E7;">
     <img src="images/AstronautSignUpandLoginGraphic.svg" id="leftTableImage">
 
     <div id="rightTable">
@@ -91,44 +101,37 @@
             
             <form>
                 <h2>Sign Up</h2>
-                <label for="first_name">First name:</label>
-                <input type="text" id="first_name" name="first_name" placeholder="John" required>
+                <label for="first_name">First name*</label>
+                <input type="text" id="first_name" name="first_name" placeholder="John" required pattern="[A-Z][a-z]*">
                 <br>
-                <label for="last_name">Last name:</label>
-                <input type="text" id="last_name" name="last_name" placeholder="Doe" required>
+                <label for="last_name">Last name*</label>
+                <input type="text" id="last_name" name="last_name" placeholder="Doe" required pattern="[A-Z][a-z]*">
                 <br>
-                <label for="age">Birth date:</label>
-                <input type="date" id="age" name="age" required>
+                <label for="age">Birth date*</label>
+                <input type="text" id="age" name="age" required placeholder="MM/DD/YYYY" onfocus="(this.type='date')">
                 <br>
-                <label for="Email">Email</label>
+                <label for="Email">Email*</label>
                 <input type="text" id="Email" name="Email" placeholder="tothe.stars@gmail.com" required>
                 <br>
-                <label for="phoneNumber">Phone Number (optional)</label>
+                <label for="phoneNumber">Phone Number</label>
                 <input type="text" id="phoneNumber" name="phoneNumber" placeholder="191-123-456-7890">
                 <br>
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" placeholder="JohnToTheStars09" required>
+                <label for="username">Username*</label>
+                <input type="text" id="username" name="username" placeholder="JohnToTheStars09" required pattern="\S{5,}">
                 <br>
-                <label for="password1">password:</label>
-                <input type="password" id="password1" name="password1" required>
+                <label for="password1">password*</label>
+                <input type="password" id="password1" name="password1" required pattern="\S{8,}" placeholder="">
                 <br>
-                <label for="password2">confirm password:</label>
-                <input type="password" id="password2" name="password2" required>
+                <label for="password2">confirm password*</label>
+                <input type="password" id="password2" name="password2" required pattern="\S{8,}" placeholder="">
                 <br>
-                <p style="color: rgb(170, 86, 23);">I have read and agree to the <a href="/pdfs/TermsandConditions.pdf">terms and conditions</a></p>
-                <br>
-                <input type="checkbox" id="termsAndConditions" name="termsAndConditions" required> 
+                <p style="color: rgb(170, 86, 23); padding: 0;">I have read and agree to the <a href="/pdfs/TermsandConditions.pdf">terms and conditions*</a></p>
+                
+                <input type="checkbox" id="termsAndConditions" style="padding: 0;" name="termsAndConditions" required> 
                 <input type="submit">
                 
             </form>
-            <div id="logInButtons">
-                <button type="button" onclick="signUpShow()">
-                    Sign Up
-                </button>
-                <button type="button" onclick="logInShow()">
-                    Log In
-                </button>
-            </div>
+            
         </div>
 
         <div class="hiddenDropdown" id="logInDiv" style="display: none;">
@@ -136,10 +139,10 @@
             <form>
                 <h2>Log In</h2>
                 <label for="username">Username:</label>
-                <input type="text" id="username" name="username" placeholder="JohnToTheStars09" required>
+                <input type="text" id="username" name="username" placeholder="JohnToTheStars09" required pattern="\S{5,}">
                 <br>
                 <label for="password1">password:</label>
-                <input type="password" id="password1" name="password1" required>
+                <input type="password" id="password1" name="password1" required pattern="\S{8,}" placeholder="">
                 <br>
 
                 <a href="forgotPassword.html">Forgot password?</a>
@@ -147,6 +150,14 @@
                 <input type="submit">
 
             </form>
+        </div>
+        <div id="logInButtons">
+            <button type="button" id="showSignUpButton" onclick="signUpShow()" style="display: none;">
+                Sign Up
+            </button>
+            <button type="button" id="showLogInButton" onclick="logInShow()" style="display: block;">
+                Log In
+            </button>
         </div>
     </div>
 </main>

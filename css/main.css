@@ -19,15 +19,24 @@ h2 {
   font-weight: 500;
 }
 
-h3, h4 {
+h3 {
   font-size: 2.6em;
   font-style: italic;
   text-transform: uppercase;
-
 }
 
-p, li, label {
+h4 {
+  font-size: 2.4em;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+p, label {
   font-size: 2em;
+}
+
+li {
+  font-size: 1.2em;
 }
 
 input {
@@ -122,18 +131,9 @@ ul {
     background-color: #EFE8CC;
   }
 
-.hiddenNav {
-    display: none;
-}
-
-.hiddenNav li {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
+  nav > ul > li {
+    font-size: 2em !important;
+  }
 
 #navBackground {
   background-image: url("/images/LandingPageBackground.svg");
@@ -144,7 +144,7 @@ ul {
 }
 
 button {
-  color: black;
+  color: rgb(170, 86, 23);
   cursor: pointer;
   margin-left: auto;
   margin-right: auto;
@@ -187,6 +187,18 @@ input[type="file"]::before {
 
 input[type="submit"] {
   cursor: pointer;
+}
+
+input:placeholder-shown {
+  border-color: white !important;
+}
+
+input:required:invalid {
+  border-color: hsl(0, 76%, 50%);;
+}
+
+input:valid {
+  border-color: hsl(120, 76%, 50%);
 }
 
 label {
